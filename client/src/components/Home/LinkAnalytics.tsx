@@ -37,14 +37,17 @@ const LinkAnalytics = () => {
         <TableBody>
           {isLoading && <LinkAnalyticsSkeleton />}
           {
-            data?.data?.map((link) => (
-              <TableRow key={link._id}>
+            data?.data?.map((link) => {
+              const linkArray = link.hashId.split("/");
+              const hashId = linkArray[linkArray.length - 1];
+
+              return (<TableRow key={link._id}>
                 <TableCell className="underline-offset-2 hover:underline">
-                  <Link to={link.hashId} target="_blank" rel="noopener noreferrer">{link.hashId}</Link>
+                  <Link to={link.hashId} target="_blank" rel="noopener noreferrer">{hashId}</Link>
                 </TableCell>
                 <TableCell className="text-right">{link.clickCount}</TableCell>
-              </TableRow>
-            ))
+              </TableRow>)
+            })
           }
         </TableBody>
       </Table>
