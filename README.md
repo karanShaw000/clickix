@@ -11,7 +11,7 @@ A URL shortener is a tool that converts a long URL (web address) into a shorter,
 - Links will be expired after 30 days
 
 
-[Application Link]()
+[Application Link](https://clickix.netlify.app/)
 
 ### 🔧 Frontend
 
@@ -33,7 +33,7 @@ A URL shortener is a tool that converts a long URL (web address) into a shorter,
 
 - Deployed using **Microsoft Azure**:
   - The **Express backend** is hosted on **Azure App Service**.
-  - The **React frontend** is deployed via **Azure Static Web Apps**.
+  - The **React frontend** is deployed via **Netlify**.
 
 
 
